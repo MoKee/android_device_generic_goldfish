@@ -2,7 +2,7 @@
   {
     "repository": "android_kernel_goldfish",
     "target_path": "kernel/goldfish",
-    "branch": "cm-10.1_2.6.29",
+    "branch": "cm-10.2",
     "remote": "cyanogen"
   }
 ]
