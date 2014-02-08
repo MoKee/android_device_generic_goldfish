@@ -1,8 +1,6 @@
 [
   {
     "repository": "android_kernel_goldfish",
-    "target_path": "kernel/goldfish",
-    "branch": "cm-10.2",
-    "remote": "cyanogen"
+    "target_path": "kernel/goldfish"
   }
 ]
