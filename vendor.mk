@@ -17,6 +17,8 @@
 # This file is to configure vendor/data partitions of emulator-related products
 #
 
+BOARD_HAVE_BLUETOOTH := true
+
 # Device modules
 PRODUCT_PACKAGES += \
     vulkan.ranchu \
@@ -58,6 +60,9 @@ PRODUCT_PACKAGES += \
     toybox_vendor \
     android.hardware.audio@2.0-service \
     android.hardware.biometrics.fingerprint@2.1-service \
+    android.hardware.bluetooth@1.0-service.btlinux \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.usb@1.0-service.ranchu \
     sh_vendor \
     iw_vendor \
     audio.r_submix.default \
@@ -65,8 +70,10 @@ PRODUCT_PACKAGES += \
     SdkSetup \
     hx-touchd \
     syscfg \
+    hcdpack \
     openlauncher \
     Launcher3QuickStepNoLaunch \
+    signal
 
 PRODUCT_PACKAGES += memtrack.ranchu \
     android.hardware.memtrack@1.0-service \
@@ -159,6 +166,9 @@ PRODUCT_COPY_FILES += \
     device/generic/goldfish/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
     device/generic/goldfish/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
     device/generic/goldfish/camera/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
